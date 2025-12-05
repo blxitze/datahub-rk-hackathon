@@ -1,0 +1,693 @@
+[
+  {
+    "model": "universities.program",
+    "pk": 1,
+    "fields": {"title": "Computer Science", "code": "CS101"}
+  },
+  {
+    "model": "universities.program",
+    "pk": 2,
+    "fields": {"title": "Business Administration", "code": "BA201"}
+  },
+  {
+    "model": "universities.program",
+    "pk": 3,
+    "fields": {"title": "Mechanical Engineering", "code": "ME301"}
+  },
+  {
+    "model": "universities.program",
+    "pk": 4,
+    "fields": {"title": "Medicine", "code": "MD401"}
+  },
+  {
+    "model": "universities.program",
+    "pk": 5,
+    "fields": {"title": "Law", "code": "LW501"}
+  },
+  {
+    "model": "universities.program",
+    "pk": 6,
+    "fields": {"title": "Economics", "code": "EC601"}
+  },
+  {
+    "model": "universities.program",
+    "pk": 7,
+    "fields": {"title": "Psychology", "code": "PS701"}
+  },
+  {
+    "model": "universities.program",
+    "pk": 8,
+    "fields": {"title": "Architecture", "code": "AR801"}
+  },
+  {
+    "model": "universities.program",
+    "pk": 9,
+    "fields": {"title": "Data Science", "code": "DS901"}
+  },
+  {
+    "model": "universities.program",
+    "pk": 10,
+    "fields": {"title": "International Relations", "code": "IR101"}
+  },
+  {
+    "model": "universities.program",
+    "pk": 11,
+    "fields": {"title": "Electrical Engineering", "code": "EE201"}
+  },
+  {
+    "model": "universities.program",
+    "pk": 12,
+    "fields": {"title": "Marketing", "code": "MK301"}
+  },
+  {
+    "model": "universities.university",
+    "pk": 1,
+    "fields": {
+      "name": "National Technical University",
+      "city": "Almaty",
+      "description": "One of the leading technical universities in Central Asia, known for its strong engineering and technology programs. The university has modern laboratories and research facilities.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000000!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d43.238949!2d76.945465!3f0!4f0!5f0.7820865974627469",
+      "tuition": 1500000.00,
+      "rating": 4.85,
+      "study_form": "both",
+      "has_dormitory": true,
+      "address": "22 Satpaev Street, Almaty 050013",
+      "phone": "+7 727 257 7000",
+      "email": "info@ntu.edu.kz",
+      "website": "https://ntu.edu.kz",
+      "founded_year": 1934,
+      "students_count": 25000,
+      "programs": [1, 3, 9, 11]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 2,
+    "fields": {
+      "name": "Kazakh-British Technical University",
+      "city": "Almaty",
+      "description": "A prestigious university offering international-standard education with British academic traditions. Strong partnerships with UK universities.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000001!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d43.2389!2d76.9455!3f0!4f0!5f0.782",
+      "tuition": 2800000.00,
+      "rating": 4.72,
+      "study_form": "full-time",
+      "has_dormitory": true,
+      "address": "59 Tole Bi Street, Almaty 050000",
+      "phone": "+7 727 272 5555",
+      "email": "admission@kbtu.kz",
+      "website": "https://kbtu.kz",
+      "founded_year": 2001,
+      "students_count": 5000,
+      "programs": [1, 2, 6, 9]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 3,
+    "fields": {
+      "name": "Nazarbayev University",
+      "city": "Astana",
+      "description": "An autonomous research university established as a model for higher education reform in Kazakhstan. Offers world-class education with international faculty.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000002!6m8!1m7!1sCAoSLEFGMVFpcE1xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d51.0905!2d71.3988!3f0!4f0!5f0.782",
+      "tuition": 0.00,
+      "rating": 4.95,
+      "study_form": "full-time",
+      "has_dormitory": true,
+      "address": "53 Kabanbay Batyr Avenue, Astana 010000",
+      "phone": "+7 7172 70 6000",
+      "email": "admissions@nu.edu.kz",
+      "website": "https://nu.edu.kz",
+      "founded_year": 2010,
+      "students_count": 6000,
+      "programs": [1, 2, 3, 4, 5, 6, 9, 10]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 4,
+    "fields": {
+      "name": "KIMEP University",
+      "city": "Almaty",
+      "description": "A leading business and social sciences university with American-style education system. Strong focus on economics, business, and international relations.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000003!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d43.2567!2d76.9123!3f0!4f0!5f0.782",
+      "tuition": 2500000.00,
+      "rating": 4.68,
+      "study_form": "both",
+      "has_dormitory": true,
+      "address": "4 Abai Avenue, Almaty 050010",
+      "phone": "+7 727 270 4440",
+      "email": "admission@kimep.kz",
+      "website": "https://kimep.kz",
+      "founded_year": 1992,
+      "students_count": 3500,
+      "programs": [2, 5, 6, 10, 12]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 5,
+    "fields": {
+      "name": "Al-Farabi Kazakh National University",
+      "city": "Almaty",
+      "description": "The oldest and largest university in Kazakhstan, offering a wide range of programs across all disciplines. Named after the famous philosopher Al-Farabi.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000004!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d43.2206!2d76.9269!3f0!4f0!5f0.782",
+      "tuition": 1200000.00,
+      "rating": 4.78,
+      "study_form": "both",
+      "has_dormitory": true,
+      "address": "71 Al-Farabi Avenue, Almaty 050040",
+      "phone": "+7 727 377 3333",
+      "email": "info@kaznu.kz",
+      "website": "https://kaznu.kz",
+      "founded_year": 1934,
+      "students_count": 40000,
+      "programs": [1, 2, 4, 5, 6, 7, 9, 10]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 6,
+    "fields": {
+      "name": "Eurasian National University",
+      "city": "Astana",
+      "description": "A major research university in the capital city, known for its strong programs in sciences, humanities, and social sciences.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000005!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d51.1801!2d71.4460!3f0!4f0!5f0.782",
+      "tuition": 1100000.00,
+      "rating": 4.55,
+      "study_form": "both",
+      "has_dormitory": true,
+      "address": "2 Satpaev Street, Astana 010008",
+      "phone": "+7 7172 35 7930",
+      "email": "info@enu.kz",
+      "website": "https://enu.kz",
+      "founded_year": 1996,
+      "students_count": 18000,
+      "programs": [1, 5, 6, 7, 10]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 7,
+    "fields": {
+      "name": "Suleyman Demirel University",
+      "city": "Almaty",
+      "description": "An international university with Turkish educational traditions, offering quality education in English and Kazakh languages.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000006!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d43.1845!2d77.0145!3f0!4f0!5f0.782",
+      "tuition": 1800000.00,
+      "rating": 4.42,
+      "study_form": "full-time",
+      "has_dormitory": true,
+      "address": "1/1 Abylai Khan Street, Kaskelen",
+      "phone": "+7 727 307 9600",
+      "email": "info@sdu.edu.kz",
+      "website": "https://sdu.edu.kz",
+      "founded_year": 1996,
+      "students_count": 7000,
+      "programs": [1, 2, 6, 9, 11]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 8,
+    "fields": {
+      "name": "Kazakh National Medical University",
+      "city": "Almaty",
+      "description": "The premier medical education institution in Kazakhstan, training healthcare professionals with modern facilities and clinical partnerships.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000007!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d43.2389!2d76.8789!3f0!4f0!5f0.782",
+      "tuition": 2000000.00,
+      "rating": 4.62,
+      "study_form": "full-time",
+      "has_dormitory": true,
+      "address": "94 Tole Bi Street, Almaty 050012",
+      "phone": "+7 727 292 7990",
+      "email": "info@kaznmu.kz",
+      "website": "https://kaznmu.kz",
+      "founded_year": 1931,
+      "students_count": 12000,
+      "programs": [4, 7]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 9,
+    "fields": {
+      "name": "Astana IT University",
+      "city": "Astana",
+      "description": "A modern IT-focused university specializing in computer science, data science, and digital technologies. Strong industry connections.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000008!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d51.1290!2d71.4307!3f0!4f0!5f0.782",
+      "tuition": 2200000.00,
+      "rating": 4.58,
+      "study_form": "full-time",
+      "has_dormitory": true,
+      "address": "55/11 Mangilik El Avenue, Astana 010000",
+      "phone": "+7 7172 64 5555",
+      "email": "admission@astanait.edu.kz",
+      "website": "https://astanait.edu.kz",
+      "founded_year": 2017,
+      "students_count": 3000,
+      "programs": [1, 9, 11]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 10,
+    "fields": {
+      "name": "University of International Business",
+      "city": "Almaty",
+      "description": "A business-focused institution providing education in management, finance, and international trade with practical business skills training.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000009!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d43.2567!2d76.9234!3f0!4f0!5f0.782",
+      "tuition": 1600000.00,
+      "rating": 4.35,
+      "study_form": "both",
+      "has_dormitory": false,
+      "address": "8A Abai Avenue, Almaty 050010",
+      "phone": "+7 727 259 8000",
+      "email": "info@uib.kz",
+      "website": "https://uib.kz",
+      "founded_year": 2002,
+      "students_count": 4500,
+      "programs": [2, 6, 10, 12]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 11,
+    "fields": {
+      "name": "Karaganda Technical University",
+      "city": "Karaganda",
+      "description": "A leading technical university in Central Kazakhstan, specializing in mining engineering, metallurgy, and industrial technologies.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000010!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d49.8047!2d73.1094!3f0!4f0!5f0.782",
+      "tuition": 950000.00,
+      "rating": 4.28,
+      "study_form": "both",
+      "has_dormitory": true,
+      "address": "56 Nursultan Nazarbayev Avenue, Karaganda 100027",
+      "phone": "+7 7212 56 5935",
+      "email": "info@ktu.kz",
+      "website": "https://ktu.kz",
+      "founded_year": 1953,
+      "students_count": 8000,
+      "programs": [1, 3, 11]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 12,
+    "fields": {
+      "name": "Aktobe Regional University",
+      "city": "Aktobe",
+      "description": "A comprehensive regional university serving Western Kazakhstan with diverse academic programs and strong community ties.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000011!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d50.2839!2d57.1670!3f0!4f0!5f0.782",
+      "tuition": 750000.00,
+      "rating": 4.12,
+      "study_form": "both",
+      "has_dormitory": true,
+      "address": "34 Moldagulova Avenue, Aktobe 030000",
+      "phone": "+7 7132 56 4789",
+      "email": "info@arsu.kz",
+      "website": "https://arsu.kz",
+      "founded_year": 1966,
+      "students_count": 10000,
+      "programs": [2, 5, 6, 7]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 13,
+    "fields": {
+      "name": "Almaty Management University",
+      "city": "Almaty",
+      "description": "A specialized business school offering MBA programs, executive education, and undergraduate business degrees with international accreditation.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000012!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d43.2378!2d76.9456!3f0!4f0!5f0.782",
+      "tuition": 2300000.00,
+      "rating": 4.52,
+      "study_form": "both",
+      "has_dormitory": false,
+      "address": "227 Rozybakiev Street, Almaty 050060",
+      "phone": "+7 727 302 2020",
+      "email": "info@almau.edu.kz",
+      "website": "https://almau.edu.kz",
+      "founded_year": 1988,
+      "students_count": 2500,
+      "programs": [2, 6, 12]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 14,
+    "fields": {
+      "name": "South Kazakhstan University",
+      "city": "Shymkent",
+      "description": "A major regional university in Southern Kazakhstan offering comprehensive education in various fields with modern facilities.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000013!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d42.3417!2d69.5901!3f0!4f0!5f0.782",
+      "tuition": 850000.00,
+      "rating": 4.18,
+      "study_form": "both",
+      "has_dormitory": true,
+      "address": "5 Taukekhan Avenue, Shymkent 160012",
+      "phone": "+7 7252 21 1950",
+      "email": "info@sku.edu.kz",
+      "website": "https://sku.edu.kz",
+      "founded_year": 1943,
+      "students_count": 15000,
+      "programs": [1, 2, 4, 7]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 15,
+    "fields": {
+      "name": "International Information Technology University",
+      "city": "Almaty",
+      "description": "A modern technology university focusing on IT education, software development, and digital innovation with strong industry partnerships.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000014!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d43.2156!2d76.8567!3f0!4f0!5f0.782",
+      "tuition": 1900000.00,
+      "rating": 4.45,
+      "study_form": "full-time",
+      "has_dormitory": true,
+      "address": "34/1 Manas Street, Almaty 050040",
+      "phone": "+7 727 330 8500",
+      "email": "info@iitu.edu.kz",
+      "website": "https://iitu.edu.kz",
+      "founded_year": 2009,
+      "students_count": 4000,
+      "programs": [1, 9, 11]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 16,
+    "fields": {
+      "name": "Kazakh Ablai Khan University",
+      "city": "Almaty",
+      "description": "A humanities-focused university specializing in foreign languages, international relations, and translation studies.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000015!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d43.2689!2d76.9345!3f0!4f0!5f0.782",
+      "tuition": 1400000.00,
+      "rating": 4.38,
+      "study_form": "both",
+      "has_dormitory": true,
+      "address": "200 Muratbaev Street, Almaty 050022",
+      "phone": "+7 727 292 0326",
+      "email": "info@ablaikhan.kz",
+      "website": "https://ablaikhan.kz",
+      "founded_year": 1941,
+      "students_count": 9000,
+      "programs": [5, 7, 10]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 17,
+    "fields": {
+      "name": "Atyrau University of Oil and Gas",
+      "city": "Atyrau",
+      "description": "A specialized university focused on petroleum engineering, oil and gas technologies, and energy sector professionals.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000016!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d46.9496!2d51.9161!3f0!4f0!5f0.782",
+      "tuition": 1100000.00,
+      "rating": 4.22,
+      "study_form": "full-time",
+      "has_dormitory": true,
+      "address": "45 Baimukhanov Street, Atyrau 060011",
+      "phone": "+7 7122 32 6789",
+      "email": "info@aogu.edu.kz",
+      "website": "https://aogu.edu.kz",
+      "founded_year": 1999,
+      "students_count": 5500,
+      "programs": [3, 6, 11]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 18,
+    "fields": {
+      "name": "Semey Medical University",
+      "city": "Semey",
+      "description": "A reputable medical university in Eastern Kazakhstan, known for training skilled healthcare professionals and medical researchers.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000017!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d50.4111!2d80.2275!3f0!4f0!5f0.782",
+      "tuition": 1350000.00,
+      "rating": 4.32,
+      "study_form": "full-time",
+      "has_dormitory": true,
+      "address": "103 Abai Street, Semey 071400",
+      "phone": "+7 7222 56 2233",
+      "email": "info@semeymedical.kz",
+      "website": "https://semeymedical.kz",
+      "founded_year": 1953,
+      "students_count": 6000,
+      "programs": [4, 7]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 19,
+    "fields": {
+      "name": "Kazakh National Agrarian University",
+      "city": "Almaty",
+      "description": "The leading agricultural university in Kazakhstan, offering programs in agronomy, veterinary medicine, and food technology.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000018!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d43.1989!2d76.8923!3f0!4f0!5f0.782",
+      "tuition": 980000.00,
+      "rating": 4.15,
+      "study_form": "both",
+      "has_dormitory": true,
+      "address": "8 Abai Avenue, Almaty 050010",
+      "phone": "+7 727 262 6433",
+      "email": "info@kaznau.kz",
+      "website": "https://kaznau.kz",
+      "founded_year": 1930,
+      "students_count": 11000,
+      "programs": [3, 6]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 20,
+    "fields": {
+      "name": "Pavlodar State University",
+      "city": "Pavlodar",
+      "description": "A comprehensive university in Northern Kazakhstan providing quality education in engineering, sciences, and humanities.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000019!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d52.2873!2d76.9674!3f0!4f0!5f0.782",
+      "tuition": 720000.00,
+      "rating": 4.05,
+      "study_form": "both",
+      "has_dormitory": true,
+      "address": "64 Lomov Street, Pavlodar 140000",
+      "phone": "+7 7182 67 3620",
+      "email": "info@psu.kz",
+      "website": "https://psu.kz",
+      "founded_year": 1960,
+      "students_count": 9500,
+      "programs": [1, 2, 3, 7]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 21,
+    "fields": {
+      "name": "Kazakh National Academy of Arts",
+      "city": "Astana",
+      "description": "The premier institution for arts education in Kazakhstan, offering programs in fine arts, music, theater, and design.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000020!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d51.1605!2d71.4704!3f0!4f0!5f0.782",
+      "tuition": 1650000.00,
+      "rating": 4.48,
+      "study_form": "full-time",
+      "has_dormitory": true,
+      "address": "50 Tauelsizdik Avenue, Astana 010000",
+      "phone": "+7 7172 70 2100",
+      "email": "info@kaznai.kz",
+      "website": "https://kaznai.kz",
+      "founded_year": 1998,
+      "students_count": 2000,
+      "programs": [8]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 22,
+    "fields": {
+      "name": "Kazakh-American Free University",
+      "city": "Oskemen",
+      "description": "An innovative university with American educational standards, offering business, IT, and liberal arts programs.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000021!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d49.9489!2d82.6095!3f0!4f0!5f0.782",
+      "tuition": 1550000.00,
+      "rating": 4.25,
+      "study_form": "both",
+      "has_dormitory": false,
+      "address": "70 Kazan Street, Oskemen 070004",
+      "phone": "+7 7232 50 1010",
+      "email": "info@kafu.kz",
+      "website": "https://kafu.kz",
+      "founded_year": 1994,
+      "students_count": 3200,
+      "programs": [1, 2, 6, 9]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 23,
+    "fields": {
+      "name": "M. Auezov South Kazakhstan University",
+      "city": "Shymkent",
+      "description": "A major multidisciplinary university named after the famous Kazakh writer, offering diverse programs in sciences and humanities.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000022!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d42.3167!2d69.5969!3f0!4f0!5f0.782",
+      "tuition": 680000.00,
+      "rating": 4.08,
+      "study_form": "both",
+      "has_dormitory": true,
+      "address": "5 Tauke Khan Avenue, Shymkent 160012",
+      "phone": "+7 7252 21 4140",
+      "email": "info@auezov.edu.kz",
+      "website": "https://auezov.edu.kz",
+      "founded_year": 1943,
+      "students_count": 22000,
+      "programs": [1, 2, 3, 5, 7]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 24,
+    "fields": {
+      "name": "Korkyt Ata Kyzylorda University",
+      "city": "Kyzylorda",
+      "description": "A regional university serving Southern Kazakhstan with programs in education, sciences, and professional studies.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000023!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d44.8488!2d65.5022!3f0!4f0!5f0.782",
+      "tuition": 620000.00,
+      "rating": 3.95,
+      "study_form": "both",
+      "has_dormitory": true,
+      "address": "29A Aiteke Bi Street, Kyzylorda 120014",
+      "phone": "+7 7242 26 1710",
+      "email": "info@korkyt.kz",
+      "website": "https://korkyt.kz",
+      "founded_year": 1937,
+      "students_count": 7500,
+      "programs": [2, 5, 7]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 25,
+    "fields": {
+      "name": "West Kazakhstan University",
+      "city": "Uralsk",
+      "description": "A comprehensive university in Western Kazakhstan offering a wide range of programs with strong regional connections.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000024!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d51.2378!2d51.3660!3f0!4f0!5f0.782",
+      "tuition": 700000.00,
+      "rating": 4.02,
+      "study_form": "both",
+      "has_dormitory": true,
+      "address": "162 Dostyk Avenue, Uralsk 090000",
+      "phone": "+7 7112 51 0879",
+      "email": "info@wku.edu.kz",
+      "website": "https://wku.edu.kz",
+      "founded_year": 1932,
+      "students_count": 8500,
+      "programs": [1, 2, 5, 6]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 26,
+    "fields": {
+      "name": "Almaty Technological University",
+      "city": "Almaty",
+      "description": "A specialized university focusing on food technology, light industry, and technological innovations in manufacturing.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000025!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d43.2345!2d76.9234!3f0!4f0!5f0.782",
+      "tuition": 1050000.00,
+      "rating": 4.12,
+      "study_form": "both",
+      "has_dormitory": true,
+      "address": "100 Tole Bi Street, Almaty 050012",
+      "phone": "+7 727 293 5217",
+      "email": "info@atu.edu.kz",
+      "website": "https://atu.edu.kz",
+      "founded_year": 1957,
+      "students_count": 6500,
+      "programs": [3, 6, 11]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 27,
+    "fields": {
+      "name": "Kostanay State University",
+      "city": "Kostanay",
+      "description": "A regional university in Northern Kazakhstan offering programs in agriculture, education, and applied sciences.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000026!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d53.2144!2d63.6246!3f0!4f0!5f0.782",
+      "tuition": 650000.00,
+      "rating": 3.98,
+      "study_form": "both",
+      "has_dormitory": true,
+      "address": "47 A. Baitursynov Street, Kostanay 110000",
+      "phone": "+7 7142 51 1002",
+      "email": "info@ksu.edu.kz",
+      "website": "https://ksu.edu.kz",
+      "founded_year": 1939,
+      "students_count": 9000,
+      "programs": [2, 3, 5, 7]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 28,
+    "fields": {
+      "name": "Narxoz University",
+      "city": "Almaty",
+      "description": "A prestigious economics and business university with a long tradition of excellence in financial education and research.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000027!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d43.2134!2d76.9012!3f0!4f0!5f0.782",
+      "tuition": 2100000.00,
+      "rating": 4.58,
+      "study_form": "both",
+      "has_dormitory": true,
+      "address": "55 Zhandosov Street, Almaty 050035",
+      "phone": "+7 727 377 1111",
+      "email": "info@narxoz.kz",
+      "website": "https://narxoz.kz",
+      "founded_year": 1963,
+      "students_count": 8000,
+      "programs": [2, 5, 6, 9, 12]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 29,
+    "fields": {
+      "name": "Taraz Regional University",
+      "city": "Taraz",
+      "description": "A comprehensive regional university serving the Zhambyl region with programs in sciences, humanities, and professional fields.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000028!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d42.9000!2d71.3667!3f0!4f0!5f0.782",
+      "tuition": 580000.00,
+      "rating": 3.92,
+      "study_form": "both",
+      "has_dormitory": true,
+      "address": "60 Tole Bi Street, Taraz 080000",
+      "phone": "+7 7262 43 3789",
+      "email": "info@tarsu.kz",
+      "website": "https://tarsu.kz",
+      "founded_year": 1998,
+      "students_count": 6200,
+      "programs": [2, 5, 7]
+    }
+  },
+  {
+    "model": "universities.university",
+    "pk": 30,
+    "fields": {
+      "name": "Turan University",
+      "city": "Almaty",
+      "description": "A private university offering innovative programs in business, law, and information technologies with modern teaching methods.",
+      "iframe_3d_tour_url": "https://www.google.com/maps/embed?pb=!4v1699000000029!6m8!1m7!1sCAoSLEFGMVFpcE5xOHJ5X0pPVHdTNEZKRTlJX1FxN3V6Q3FJUWxKRWlvSEhfZEFH!2m2!1d43.2389!2d76.9267!3f0!4f0!5f0.782",
+      "tuition": 1750000.00,
+      "rating": 4.32,
+      "study_form": "both",
+      "has_dormitory": false,
+      "address": "16A Satpaev Street, Almaty 050013",
+      "phone": "+7 727 260 4090",
+      "email": "info@turan-edu.kz",
+      "website": "https://turan-edu.kz",
+      "founded_year": 1992,
+      "students_count": 5000,
+      "programs": [1, 2, 5, 9, 12]
+    }
+  }
+]
+
