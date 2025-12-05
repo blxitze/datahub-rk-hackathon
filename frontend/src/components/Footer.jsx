@@ -25,7 +25,7 @@ function Footer() {
               {t('footer.description')}
             </p>
             <div className="flex gap-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-800 rounded-lg text-slate-400 hover:text-white hover:bg-slate-700 transition-colors">
+              <a href="https://github.com/blxitze/datahub-rk-hackathon" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-800 rounded-lg text-slate-400 hover:text-white hover:bg-slate-700 transition-colors">
                 <Github className="w-5 h-5" />
               </a>
             </div>
@@ -68,11 +68,11 @@ function Footer() {
               </li>
               <li className="flex items-center gap-2 text-slate-400">
                 <Phone className="w-4 h-4 text-primary-400" />
-                <span>+7 (777) 123-4567</span>
+                <span>+7 (677) 676-7676</span>
               </li>
               <li className="flex items-center gap-2 text-slate-400">
                 <MapPin className="w-4 h-4 text-primary-400" />
-                <span>{t('footer.location')}</span>
+                <span>Алматы, Казахстан</span>
               </li>
             </ul>
           </div>
