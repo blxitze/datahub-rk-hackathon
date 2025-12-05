@@ -6,5 +6,6 @@ Pillow==10.1.0
 gunicorn==21.2.0
 python-dotenv==1.0.0
 whitenoise==6.6.0  # Serve static files with gunicorn
+dj-database-url==2.1.0  # Parse DATABASE_URL for cloud deployments
 openai>=1.0.0  # OpenAI API for AI chatbot and comparison features
 
