@@ -4,10 +4,12 @@ services:
   postgres:
     image: postgres:15-alpine
     container_name: unihub-postgres
+    env_file:
+      - .env
     environment:
-      POSTGRES_DB: unihub
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ${POSTGRES_DB:-unihub}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
@@ -25,15 +27,17 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     container_name: unihub-backend
+    env_file:
+      - .env
     environment:
-      - DEBUG=True
-      - DJANGO_SECRET_KEY=your-secret-key-change-in-production
-      - POSTGRES_DB=unihub
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_HOST=postgres
-      - POSTGRES_PORT=5432
-      - ALLOWED_HOSTS=localhost,127.0.0.1,backend
+      - DEBUG=${DEBUG:-True}
+      - DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY:-dev-secret-change}
+      - POSTGRES_DB=${POSTGRES_DB:-unihub}
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgres}
+      - POSTGRES_HOST=${POSTGRES_HOST:-postgres}
+      - POSTGRES_PORT=${POSTGRES_PORT:-5432}
+      - ALLOWED_HOSTS=${ALLOWED_HOSTS:-localhost,127.0.0.1,backend}
     volumes:
       - ./backend:/app
       - backend_media:/app/media
@@ -52,8 +56,10 @@ services:
       dockerfile: Dockerfile
       target: development
     container_name: unihub-frontend
+    env_file:
+      - .env
     environment:
-      - VITE_API_URL=/api
+      - VITE_API_URL=${VITE_API_URL:-/api}
     volumes:
       - ./frontend:/app
       - /app/node_modules
