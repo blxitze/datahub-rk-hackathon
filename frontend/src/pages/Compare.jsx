@@ -7,20 +7,59 @@ import ComparisonTable from '../components/ComparisonTable'
 import { CompareSummary } from '../components/ai'
 import { useLanguage } from '../contexts/LanguageContext'
 
+// Helper to create a cache key from compareList
+const getSummaryCacheKey = (ids) => {
+  return [...ids].sort((a, b) => a - b).join('-')
+}
+
 function Compare({ compareList, clearCompare, toggleCompare }) {
   const [universities, setUniversities] = useState([])
   const [loading, setLoading] = useState(true)
-  const [summary, setSummary] = useState(null)
   const [summaryLoading, setSummaryLoading] = useState(false)
   const [summaryError, setSummaryError] = useState(null)
   const { t } = useLanguage()
+
+  // Initialize summary from localStorage if it matches current compareList
+  const [summary, setSummary] = useState(() => {
+    if (typeof window === 'undefined') return null
+    try {
+      const saved = localStorage.getItem('compareSummary')
+      if (saved) {
+        const { ids, summary: savedSummary } = JSON.parse(saved)
+        // Check if saved summary matches current compareList
+        const savedKey = getSummaryCacheKey(ids)
+        const currentKey = getSummaryCacheKey(compareList)
+        if (savedKey === currentKey && compareList.length >= 2) {
+          return savedSummary
+        }
+      }
+    } catch (e) {
+      console.error('Error loading summary from localStorage:', e)
+    }
+    return null
+  })
+
+  // Save summary to localStorage whenever it changes
+  useEffect(() => {
+    if (summary && compareList.length >= 2) {
+      try {
+        localStorage.setItem('compareSummary', JSON.stringify({
+          ids: compareList,
+          summary: summary
+        }))
+      } catch (e) {
+        console.error('Error saving summary to localStorage:', e)
+      }
+    }
+  }, [summary, compareList])
 
   useEffect(() => {
     const fetchUniversities = async () => {
       if (compareList.length === 0) {
         setUniversities([])
         setLoading(false)
-        setSummary(null) // Clear summary when no universities
+        setSummary(null)
+        localStorage.removeItem('compareSummary')
         return
       }
 
@@ -28,7 +67,23 @@ function Compare({ compareList, clearCompare, toggleCompare }) {
         const promises = compareList.map(id => getUniversity(id))
         const results = await Promise.all(promises)
         setUniversities(results)
-        setSummary(null) // Clear summary when universities change
+        
+        // Check if saved summary matches new compareList
+        try {
+          const saved = localStorage.getItem('compareSummary')
+          if (saved) {
+            const { ids } = JSON.parse(saved)
+            const savedKey = getSummaryCacheKey(ids)
+            const currentKey = getSummaryCacheKey(compareList)
+            if (savedKey !== currentKey) {
+              // Universities changed, clear summary
+              setSummary(null)
+              localStorage.removeItem('compareSummary')
+            }
+          }
+        } catch (e) {
+          console.error('Error checking localStorage:', e)
+        }
       } catch (error) {
         console.error('Error fetching universities:', error)
       } finally {
@@ -63,6 +118,7 @@ function Compare({ compareList, clearCompare, toggleCompare }) {
 
   const handleCloseSummary = () => {
     setSummary(null)
+    localStorage.removeItem('compareSummary')
   }
 
   return (

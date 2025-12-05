@@ -29,6 +29,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Serve static files with gunicorn
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -82,6 +83,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
@@ -97,7 +99,26 @@ CORS_ALLOWED_ORIGINS = [
     'http://frontend:3000',
 ]
 
+# Add Render frontend URL from environment if set
+RENDER_FRONTEND_URL = os.environ.get('RENDER_FRONTEND_URL')
+if RENDER_FRONTEND_URL:
+    CORS_ALLOWED_ORIGINS.append(RENDER_FRONTEND_URL)
+
+# Allow all origins in DEBUG mode, or use regex for Render domains
 CORS_ALLOW_ALL_ORIGINS = DEBUG
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://.*\.onrender\.com$",  # Allow all Render subdomains
+]
+
+# CSRF trusted origins (required for POST requests from frontend)
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:3000',
+    'http://localhost:5173',
+    'http://127.0.0.1:3000',
+    'http://127.0.0.1:5173',
+    'http://frontend:3000',
+    'https://*.onrender.com',  # Render domains
+]
 
 # REST Framework settings
 REST_FRAMEWORK = {

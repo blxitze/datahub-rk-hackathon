@@ -16,3 +16,5 @@ urlpatterns = [
     path('chat/', ChatView.as_view(), name='chat'),
     path('compare-summary/', CompareSummaryView.as_view(), name='compare-summary'),
 ]
+
+

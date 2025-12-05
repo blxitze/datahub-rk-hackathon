@@ -3,10 +3,18 @@
 set -e
 
 echo "Waiting for PostgreSQL..."
+MAX_RETRIES=30
+RETRY_COUNT=0
 while ! python -c "import socket; socket.create_connection(('$POSTGRES_HOST', ${POSTGRES_PORT:-5432}))" 2>/dev/null; do
-    sleep 1
+    RETRY_COUNT=$((RETRY_COUNT + 1))
+    if [ $RETRY_COUNT -ge $MAX_RETRIES ]; then
+        echo "Warning: PostgreSQL not available after $MAX_RETRIES attempts, proceeding anyway..."
+        break
+    fi
+    echo "Waiting for PostgreSQL... (attempt $RETRY_COUNT/$MAX_RETRIES)"
+    sleep 2
 done
-echo "PostgreSQL is available"
+echo "PostgreSQL check complete"
 
 echo "Making migrations for universities app..."
 python manage.py makemigrations universities --noinput

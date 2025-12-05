@@ -73,3 +73,5 @@ class CompareSummaryResponseSerializer(serializers.Serializer):
     summary = serializers.CharField(help_text="AI-generated comparison summary in markdown format")
     success = serializers.BooleanField(default=True)
     universities_compared = serializers.IntegerField(help_text="Number of universities compared")
+
+

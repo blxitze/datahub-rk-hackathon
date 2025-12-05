@@ -8,6 +8,8 @@ import logging
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
 
 from universities.models import University
 from universities.serializers import UniversityDetailSerializer
@@ -23,6 +25,7 @@ from .services import chat_with_model, summarize_comparison
 logger = logging.getLogger(__name__)
 
 
+@method_decorator(csrf_exempt, name='dispatch')
 class ChatView(APIView):
     """
     AI Chatbot endpoint for answering questions about universities.
@@ -41,6 +44,8 @@ class ChatView(APIView):
             "success": true
         }
     """
+    # Disable authentication to avoid CSRF issues for public API
+    authentication_classes = []
     
     def post(self, request):
         """Process a chat message and return AI response."""
@@ -91,6 +96,7 @@ class ChatView(APIView):
             )
 
 
+@method_decorator(csrf_exempt, name='dispatch')
 class CompareSummaryView(APIView):
     """
     AI-powered comparison summary generator.
@@ -109,6 +115,8 @@ class CompareSummaryView(APIView):
             "universities_compared": 3
         }
     """
+    # Disable authentication to avoid CSRF issues for public API
+    authentication_classes = []
     
     def post(self, request):
         """Generate a comparison summary for the specified universities."""
@@ -175,3 +183,5 @@ class CompareSummaryView(APIView):
                 },
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
+
+

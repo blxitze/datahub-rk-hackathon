@@ -307,3 +307,5 @@ class LLMServiceTests(TestCase):
             get_openai_client()
         
         self.assertIn("OPENAI_API_KEY", str(context.exception))
+
+

@@ -56,3 +56,5 @@ export const getCompareSummary = async (universityIds) => {
 }
 
 export default aiApi
+
+

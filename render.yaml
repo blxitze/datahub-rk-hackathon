@@ -1,6 +1,42 @@
+databases:
+  - name: unihub-db
+    databaseName: unihub
+    user: unihub
+    plan: free
+
 services:
   - type: web
-    name: backend
-    env: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn backend.wsgi:application --bind 0.0.0.0:8000"
+    name: datahub-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    envVars:
+      - key: DEBUG
+        value: "False"
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: POSTGRES_DB
+        fromDatabase:
+          name: unihub-db
+          property: database
+      - key: POSTGRES_USER
+        fromDatabase:
+          name: unihub-db
+          property: user
+      - key: POSTGRES_PASSWORD
+        fromDatabase:
+          name: unihub-db
+          property: password
+      - key: POSTGRES_HOST
+        fromDatabase:
+          name: unihub-db
+          property: host
+      - key: POSTGRES_PORT
+        fromDatabase:
+          name: unihub-db
+          property: port
+      - key: ALLOWED_HOSTS
+        value: ".onrender.com"
+      - key: OPENAI_API_KEY
+        sync: false  # Set manually in Render dashboard
