@@ -98,7 +98,7 @@ datahub-rk-hackathon/
 
 1. **Клонируйте репозиторий**
    ```bash
-   git clone https://github.com/yourusername/datahub-rk-hackathon.git
+   git clone https://github.com/blxitze/datahub-rk-hackathon.git
    cd datahub-rk-hackathon
    ```
 
