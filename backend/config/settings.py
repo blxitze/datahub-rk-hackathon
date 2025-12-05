@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'universities',
+    'ai',  # AI features: chatbot and comparison summaries
 ]
 
 MIDDLEWARE = [

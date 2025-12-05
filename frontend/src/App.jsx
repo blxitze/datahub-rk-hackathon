@@ -7,6 +7,7 @@ import Universities from './pages/Universities'
 import UniversityDetails from './pages/UniversityDetails'
 import Compare from './pages/Compare'
 import Favorites from './pages/Favorites'
+import { AIChatWidget } from './components/ai'
 
 function App() {
   const [favorites, setFavorites] = useState(() => {
@@ -116,6 +117,9 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      
+      {/* AI Chat Widget - Available globally */}
+      <AIChatWidget />
     </div>
   )
 }

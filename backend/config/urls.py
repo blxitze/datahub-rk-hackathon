@@ -9,6 +9,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('universities.urls')),
+    path('api/ai/', include('ai.urls')),  # AI endpoints for chatbot and comparison summaries
 ]
 
 if settings.DEBUG:
