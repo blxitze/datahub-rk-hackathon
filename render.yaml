@@ -29,6 +29,6 @@ services:
           name: unihub-db
           property: port
       - key: ALLOWED_HOSTS
-        value: ".onrender.com"
+        value: "datahub-rk-hackathon.onrender.com,.onrender.com,localhost"
       - key: OPENAI_API_KEY
         sync: false  # Set manually in Render dashboard
