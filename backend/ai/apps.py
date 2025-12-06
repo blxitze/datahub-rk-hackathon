@@ -16,3 +16,4 @@ class AiConfig(AppConfig):
     verbose_name = 'AI Features'
 
 
+

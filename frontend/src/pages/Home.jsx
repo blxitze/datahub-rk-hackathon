@@ -39,7 +39,7 @@ function Home({ toggleFavorite, favorites, toggleCompare, compareList }) {
   const stats = [
     { icon: Building2, value: '30+', label: t('home.stats.universities') },
     { icon: Users, value: '200K+', label: t('home.stats.students') },
-    { icon: Award, value: '100+', label: t('home.stats.programs') },
+    { icon: Award, value: '10+', label: t('home.stats.programs') },
     { icon: BookOpen, value: '15+', label: t('home.stats.cities') },
   ]
 

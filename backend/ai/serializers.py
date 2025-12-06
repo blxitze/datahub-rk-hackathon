@@ -75,3 +75,4 @@ class CompareSummaryResponseSerializer(serializers.Serializer):
     universities_compared = serializers.IntegerField(help_text="Number of universities compared")
 
 
+
